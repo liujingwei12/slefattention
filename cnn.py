@@ -71,7 +71,7 @@ class Classifier_CNN:
         start_time = time.time()
         print("开始训练数据。。。")
         hist = self.model.fit(x_train, y_train, batch_size=mini_batch_size, epochs=nb_epochs,
-                              verbose=1, validation_data=(x_val, y_val), callbacks=self.callbacks)
+                              verbose=2, validation_data=(x_val, y_val), callbacks=self.callbacks)
         print("训练结束。。。")
         duration = time.time() - start_time
 
